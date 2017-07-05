@@ -1,6 +1,8 @@
 #pragma once
 
 #include <iostream>
+#include "MemoHandler.h"
+#include "InputClass.h"
 
 class MemoClass{
 public:
@@ -14,5 +16,5 @@ private:
 	void PrintMenu();
 private:
 	MemoHandler* mHandler;
-	InputHandler* iHandler;
+	InputClass* iHandler;
 };

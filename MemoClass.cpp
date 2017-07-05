@@ -21,7 +21,7 @@ bool MemoClass::Initialize(){
 	
 	
 	
-	iHandler = new InputHandler();
+	iHandler = new InputClass();
 	if(!iHandler){
 		return false;
 	}
@@ -38,16 +38,16 @@ void MemoClass::Run(){
 	
 	bool finish;
 	
-	finish = true;
+	finish = false;
 	while(!finish){
 		
 		PrintMenu();
 		
-		bool success;
+		bool exit;
 		
-		success = mHandler->HandleInput(iHandler);
-		if(success){
-			finish = false;
+		exit = mHandler->HandleInput(iHandler);
+		if(exit){
+			finish = true;
 		}
 	}
 	
@@ -57,18 +57,28 @@ void MemoClass::Terminate(){
 	
 	if(mHandler){
 		mHandler->Terminate();
-		free mHandler;
+		delete mHandler;
 		mHandler = 0;
 	}
 	
 	if(iHandler){
 		iHandler->Terminate();
-		free iHandler;
+		delete iHandler;
 		iHandler = 0;
 	}
 	
 }
 
 void MemoClass::PrintMenu(){
-	
+	std::cout << "┌───────────────────────────────┐\n";
+	std::cout << "│                               │\n";
+	std::cout << "│         1. 메모 만들기        │\n";
+	std::cout << "│         2. 메모 지우기        │\n";
+	std::cout << "│         3. 메모 초기화        │\n";
+	std::cout << "│         4. 메모 저장          │\n";
+	std::cout << "│         5. 메모 보기          │\n";
+	std::cout << "│         6. 종료               │\n";
+	std::cout << "│                               │\n";
+	std::cout << "└───────────────────────────────┘\n";
+	std::cout << "\n\n> ";
 }

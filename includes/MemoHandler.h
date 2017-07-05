@@ -2,6 +2,11 @@
 
 #include <iostream>
 #include "InputFlags.h"
+#include "InputClass.h"
+#include "MemoryAllocator.h"
+
+enum{MAX_MEMO_SIZE = 100};
+
 
 class MemoHandler{
 public:
@@ -11,7 +16,7 @@ public:
 	bool Initialize();
 	void Terminate();
 	
-	bool HandleInput(InputHandler*);
+	bool HandleInput(InputClass*);
 private:
 	bool AddMemo(char *, int);
 	bool RemoveMemo(int);

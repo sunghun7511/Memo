@@ -1,6 +1,7 @@
 #pragma once
 
 enum{
+	INPUT_NONE,
 	INPUT_PRINT_MEMO,
 	INPUT_ADD_MEMO,
 	INPUT_REMOVE_MEMO,

@@ -17,6 +17,7 @@ public:
 	void Terminate();
 	
 	bool HandleInput(InputClass*);
+	unsigned int GetSize();
 private:
 	bool AddMemo(char *, int);
 	bool RemoveMemo(int);

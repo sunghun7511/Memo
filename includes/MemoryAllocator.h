@@ -13,5 +13,5 @@ public:
 	
 	void *Alloc(unsigned int);
 private:
-	void HandleError();
+	void HandleError(char *);
 };

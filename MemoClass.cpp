@@ -70,15 +70,15 @@ void MemoClass::Terminate(){
 }
 
 void MemoClass::PrintMenu(){
-	std::cout << "┌───────────────────────────────┐\n";
-	std::cout << "│                               │\n";
-	std::cout << "│         1. 메모 만들기        │\n";
-	std::cout << "│         2. 메모 지우기        │\n";
-	std::cout << "│         3. 메모 초기화        │\n";
-	std::cout << "│         4. 메모 저장          │\n";
-	std::cout << "│         5. 메모 보기          │\n";
-	std::cout << "│         6. 종료               │\n";
-	std::cout << "│                               │\n";
-	std::cout << "└───────────────────────────────┘\n";
+	std::cout << "┌──────────────────────────────────┐\n";
+	std::cout << "│                                  │\n";
+	std::cout << "│          1. 메모 만들기          │\n";
+	std::cout << "│          2. 메모 지우기          │\n";
+	std::cout << "│          3. 메모 초기화          │\n";
+	std::cout << "│          4. 메모 저장            │\n";
+	std::cout << "│          5. 메모 보기            │\n";
+	std::cout << "│          6. 종료                 │\n";
+	std::cout << "│                                  │\n";
+	std::cout << "└──────────────────────────────────┘\n";
 	std::cout << "\n\n> ";
 }

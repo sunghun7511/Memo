@@ -17,11 +17,12 @@ void *MemoryAllocator::Alloc(unsigned int size){
 	void *ptr;
 	ptr = malloc(size);
 	if(!ptr){
-		HandleError();
+		HandleError((char *)"Allocate Error");
 	}
 	return ptr;
 }
 
-void MemoryAllocator::HandleError(){
-	
+void MemoryAllocator::HandleError(char *error){
+	std::cerr << "Error!\n " << error;
+	exit(-1);
 }
